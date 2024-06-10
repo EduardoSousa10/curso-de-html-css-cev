@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/*todas as demais medias*/
+
+
+/*     medidas ignoradas porque o estilo das telas pequenas (celular) ja fiz no style.css
+@media screen and (max-width: 600px){}
+@media screen and (min-width: 600px) and (max-width: 768px){}*/
+
+@media print /*impressão (desnecessario pois não funciona a impressão do background-image) */{
+*{
+        font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-image: url(../imagens/back-print.jpg);
+}
+main h1{
+    text-shadow: none;
+    color: black;
+}
+main{
+    border: 2px solid black;
+    width: 90vw;
+}
+main::after{
+    content: 'Essa impressão foi feita pelo site do CursoemVídeo';
+    text-decoration: overline;
+}
+#phone{display: none;}
+#tablet{display: none;}
+#print{display: block;}
+#pc{display: none;}
+#tv{display: none;}
+}
+
+@media screen and (min-width:768px) and (max-width:999px) /*tablet*/{
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    #phone{display: none;}
+    #tablet{display: block;}
+    #print{display: none;}
+    #pc{display: none;}
+    #tv{display: none;}
+}
+
+@media screen  and (min-width:1000px) and (max-width:1199px) /*desktop*/ {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    main{
+        width: 450px;
+    }
+    #phone{display: none;}
+    #tablet{display: none;}
+    #print{display: none;}
+    #pc{display: block;}
+    #tv{display: none;}
+}
+
+@media screen and (min-width: 1200px) /*grandes telas*/ {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 1000px;
+    }
+    #phone{display: none;}
+    #tablet{display: none;}
+    #print{display: none;}
+    #pc{display: none;}
+    #tv{display: block;}
+}
