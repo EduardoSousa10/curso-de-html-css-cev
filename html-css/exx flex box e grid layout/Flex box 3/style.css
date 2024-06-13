@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.conteiner{
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+    height: 100px;
+    flex-direction: row;
+    align-items: flex-end ;
+    margin: auto;
+    gap: 10px;
+    background-color: black;
+    justify-content:center;
+}
+h1{
+    color: white;
+    font-size: 3em;
+}
+.galpao{
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+    height: 350px;
+    border: 1px solid black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    background-color: black;
+    justify-content: center;
+}
+li{
+    border: 1px solid gray;
+    height: 150px;
+    width: 150px;
+    list-style: none;
+    display: flex;
+}
+img{
+display: block;
+max-width: 100%;
+}
+
