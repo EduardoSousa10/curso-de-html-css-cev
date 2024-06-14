@@ -31,6 +31,9 @@ main{
     padding: 13px;
     box-shadow: 5px 5px 1px black;
 }
+main:hover{
+    box-shadow: 10px 10px 1px black;
+}
 .imagem{
     border-radius: 10px;
     display: flex;
