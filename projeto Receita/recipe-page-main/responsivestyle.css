@@ -1,0 +1,59 @@
+@media (max-width: 768px) {
+    main {
+        height: auto; /* Ajusta a altura para conteúdo dinâmico */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .omelete p, #prep, .pnutri {
+        font-size: .9em;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .time ul, .ingre {
+        padding-left: 15px;
+    }
+
+    .linha {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    table {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    th, td {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .omelete h1, .ingre h2, .nutri {
+        font-size: 1.5em;
+    }
+
+    .omelete p, #prep, .pnutri {
+        font-size: 1em;
+    }
+
+    .time li, .ingre li {
+        font-size: 1em;
+    }
+
+    table {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    th, td {
+        padding-left: 5px;
+    }
+
+    .linha {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
