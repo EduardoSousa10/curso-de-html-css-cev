@@ -36,12 +36,11 @@ h1{
 li{
     border: 1px solid gray;
     height: 150px;
-    width: 150px;
+    width: 180px;
     list-style: none;
     display: flex;
 }
 img{
-display: block;
 max-width: 100%;
 }
 
