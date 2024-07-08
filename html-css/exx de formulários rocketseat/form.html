@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <!-- Aula 1--> 
+    <form action="" method="get"> <!-- Abrir caixa de formulário, usar o get para mostrar o tipo de envio de dados, no caso para que eles apareçam, e o action para colocar a pagina que vc quer que ele vá-->
+        <input type="text"> <!-- Tipo de input para caixa de texto-->
+        <button autofocus name="Botao1" value="botao-numero-1"><!-- Botão padrão com opção de focar, nome estabelecido e valor estabelecido-->
+            Enviar
+        </button>
+        <button type="submit"> <!-- Botão com o tipo submit(envio) estabelecido-->
+            Enviar 2
+        </button>
+    </form>
+
+
+        <!-- Aula 2 -->
+    <form>
+        <input type="text" name="Text-1" placeholder="Coloque seu nome"> <!-- para fazer um input é necessário que ele tenha type e name, para fazer os envios dos formulários. -->
+        <button> Enviar</button>
+    </form>
+
+      <!-- Podemos definir atributos gerais para os input, como:
+
+        value="" onde a caixa de texto fica previamente marcada com o nome que eu estabelecer.
+
+        autocomplete="" aqui ele vai tentar completar dando sujestoes de coisas que vc definiu como padrões.
+
+        Size="" define o tamnho do input (melhor definir pelo CSS).
+
+        autofocos focar o campo do input.
+
+        disabled desabiltar o campo do input.
+
+        readonly trava o imput e impossibilitada alterar o que está escrito dentro.
+
+        form="" faz a ligação de um input que esteja fora do formulário (<form>), utilizando o id="" que estabelecemos no (<form>).
+
+        required faz com que seja possivel o envio do input apenas quando tiver dados estabelecidos nele.
+
+        placeholder="" deixa previamente escrito no input algo que vc queira, ex: "coloque seu nome". -->
+
+        <!-- Aula 3 -->
+
+        <form>
+            <input type="number" min="5" max="10" step="2"> <!-- Input do tipo número onde o minímo é 5, o máximo é 10 e pula de 2 em 2. -->
+            <button>
+                Enviar
+            </button>
+        </form>
+
+        <!-- Aula 4 -->
+
+        <form>
+            <input type="email" name="mail" minlength="10" maxlength="50" pattern=".+@rocketseat\.com\.br" required title="coloque um email da rocketseat">
+        <!--input do tipo email onde o minímo é de 10 characteres e o máximo é de 50 characteres, o único formato permitido é @rocketseat.com.br e é um campo obrigatório.-->            
+             <button>Enviar</button>
+        </form>
+
+       <!--  aula 5 -->
+
+        <form> <!-- Usar o method="post"para esconder a senha -->
+        <input type="password" name="senha" minlength="4" maxlength="8" title="apenas Hexadecimal" pattern="[#0-9a-fA-F]{4,8}"> <!-- input do tipo senha onde o mínimo é 4 characteres o máximo são 8, o título é apenas Hexadecimal onde mostra para pessoa como a caixa tem que ser preenchida, e a regra de preenchimento é de 0 ao 9, do a ao f, do A ao F e de no mínimo 4 e no máximo 8 characteres. -->
+        <button>Enviar</button>
+       </form>
+
+       <!-- aula 6 -->
+
+       <form enctype="multipart/form-data"> <!-- É necessário usar o enctype desse tipo quando colocar input do tipo file -->
+        <input type="file" name="foto-de-perfil" multiple accept=".html"> <!-- input do tipo de enviar arquivos, com o nome foto-de-peril(aparece na url quando enviamos) multiple(mais de 1 arquivo) uso o accept para escolher o tipo de arquivo que preciso enviar, no caso apenas arquivos html -->
+        <button>Enviar</button>
+       </form>
+
+       <!-- aula 7 -->
+
+       <form>
+        Nivel de satisfação:
+        <input type="range" name="total" min="0" max="10" step="2" value="0">
+        <!-- input do tipo de barra em que vc puxa ao lado, bom para colocar nivel de satisfação do cliente, onde nesse caso coloquei um mínimo de 0, máximo de 10, pular de 2 em 2 e começar no 0 -->
+        <button>Enviar</button>
+       </form>
+
+       <!-- AULA 8 -->
+        <form>
+            <datalist id="colorpicker">
+                <option value="#abc123"></option>
+                <option value="#fff555"></option>
+            </datalist> <!-- Usei esse datalist e esses option value para dar opções de cores e os liguei com o input color por meio do id colorpicker -->
+
+            <input type="color" name="cor" list="colorpicker" value="#123456"> <!-- Input do tipo cor, ligado ao datalist pela list="colorpicker" e com uma cor pré-definida pelo value="". -->
+            <button>Enviar</button>
+        </form>
+
+        <!-- Aula 9 -->
+         <form>
+            <input type="checkbox" name="box" value="caixa"> <!-- Input de marcação de caixa -->
+            <button>Enviar</button>
+         </form>
+
+         <form>
+            <input type="radio" name="box" value="caixa"> 
+            <input type="radio" name="box" value="gaveta">
+            <!-- Input de marcação de caixa, apenas 1 opção pode ser marcada, precissam ter o msm nome -->
+            <button>Enviar</button>
+         </form>
+         <form>
+            <input type="hidden" name="tipo" value="hsyhdvhvb-bhbshvbhdb-bsbhss"> <!-- Input que não aparece para a pessoa que esta preenchendo o formulário, apenas para o programador depois. -->
+            <button>Enviar</button>
+         </form>
+
+         <!-- aula 10 -->
+
+         <form>
+            <input type="date" name="birth"> <!-- Input do tipo data, bom para colocar nascimento. -->
+            <button>Enviar</button>
+         </form>
+
+         <!-- aula 11 -->
+
+         <form>
+            <label for="texto1">Digite seu nome:</label>
+            <input type="text" name="texto" id="texto1" placeholder="Seu nome">
+            <!-- Usar o label para linkar o que for escrito na frente do input com ele, por meio do for="" no label e o id="" no input. -->
+            <button>Enviar</button>
+         </form>
+
+         <!-- aula 12 -->
+
+         <form>
+            <textarea name="texto" placeholder="Digite seu nome"></textarea> <!-- input de caixa de escrita, posso colocar wrap="off" para nâo quebrar o texto -->
+            <button>Enviar</button>
+         </form>
+
+         <!-- aula 13 -->
+
+         <form>
+            <select name="selecao">
+                <option value="">Selecione:</option>
+                <option label="Vini-jr"></option>
+                <option label="Neymar"></option>
+                <option label="Rodrygo"></option>
+                <!-- caixa para selecionar as opções que estabeleci com os <option label=""> -->    
+                <button>Enviar</button> 
+            </select>
+         </form>
+
+         <form>
+            <select name="selecao">
+            <optgroup label="ataque">
+                <option value="">Escolha apenas um:</option>
+                <option label="Vini-jr"></option>
+                <option label="Neymar"></option>
+                <option label="Rodrygo"></option>
+            </optgroup>
+            <optgroup label="meio-de-campo">
+                <option label="Paqueta"></option>
+                <option label="Bruno-Guimaraes"></option>
+                <option label="João-Gomes"></option>
+            </optgroup>
+            </select>
+            <!-- caixa de marcação com opções que organizei, o optgroup organiza por colunas e os option label são as opções que posso marcar, o <select> é uma tag para selecionar uma opção.  -->
+            <button>Enviar</button>
+         </form>
+         
+         <!-- aula 14 -->
+
+         <form>
+            <fieldset>
+                <legend> Contato</legend>
+                <input type="text" name="nome" placeholder="seu nome">
+                <input type="email" name="email" placeholder="seu email">
+                <button>Enviar</button>
+            </fieldset>
+            <fieldset>
+                <legend> Dados bancários</legend>
+                <input type="text" name="banco" placeholder="seu banco">
+                <button>Enviar</button>
+            </fieldset>
+            <!-- usamos essa opção do fieldset para agrupar em uma caixa tudo e colocamos o legend para definir o nome da caixa que fizemos. -->
+         </form>
+
+
+
+</body>
+</html>
